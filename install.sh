@@ -11,7 +11,7 @@
 
 dir=~/dotfiles                                     # dotfiles dir
 olddir=~/dotfiles_old                              # old dotfiles backup directory
-files=".bashrc .vimrc .zshrc .config/clerk/config .config/i3/config .config/yabar/yabar.conf .spacemacs"                         #list of files/folders to symlink in homedir
+files=".screenlayout/dual_left.sh .screenlayout/dual-monitor.sh .screenlayout/single.sh .screenlayout/triple.sh .scripts/volume.sh .scripts/brightness.py  .scripts/measure-net-speed-bash .scripts/select_display.sh .scripts/cur_playing.sh  .bashrc .vimrc .zshrc .config/clerk/config .config/i3/config .config/yabar/yabar.conf .spacemacs"                         #list of files/folders to symlink in homedir
 
 
 ############
@@ -30,8 +30,8 @@ for file in $files; do
 done
 
 for file in $files; do
-    echo "Creating symlink of $file to the one in home directory"
-    ln -s $dir/$file ~/$file
+    echo "Copying of $file to the one in home directory"
+    cp $dir/$file ~/$file
 done
 
 
